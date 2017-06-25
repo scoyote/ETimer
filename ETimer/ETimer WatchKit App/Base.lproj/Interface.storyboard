@@ -14,15 +14,27 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ETimer_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" title="Button" id="cM2-2i-QB7">
+                        <button width="1" alignment="left" title="Start" id="cM2-2i-QB7">
                             <connections>
-                                <action selector="buttonTapped" destination="AgC-eL-Hgc" id="2pq-ez-urd"/>
+                                <action selector="startWorkout" destination="AgC-eL-Hgc" id="EEP-oa-p1F"/>
                             </connections>
                         </button>
-                        <label alignment="left" text="Label" id="FkV-Lc-WWp"/>
+                        <timer width="136" alignment="left" previewedSeconds="3600" id="Ike-P2-mb0"/>
+                        <button width="1" alignment="left" title="Pause" id="smi-BB-aLX">
+                            <connections>
+                                <action selector="stopWorkout" destination="AgC-eL-Hgc" id="2We-ms-4ZY"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Reset" id="dry-5V-qjo">
+                            <connections>
+                                <action selector="resetButtonTapped" destination="AgC-eL-Hgc" id="Bl4-tU-rHu"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
-                        <outlet property="label" destination="FkV-Lc-WWp" id="C2s-aU-Vn5"/>
+                        <outlet property="buttonReset" destination="dry-5V-qjo" id="qq2-Jc-pbo"/>
+                        <outlet property="pauseButtonTapped" destination="smi-BB-aLX" id="CL6-9w-Mkc"/>
+                        <outlet property="workoutTimer" destination="Ike-P2-mb0" id="mBS-8e-neI"/>
                     </connections>
                 </controller>
             </objects>
